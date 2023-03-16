@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+  <link rel="stylesheet" href="form-style.css">
+  <script src="https://kit.fontawesome.com/77826facbe.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Main header -->
+  <header>
+    <a href="index.html" class="navbar-brand">
+      <h2>毛小孩星球</h2>
+    </a>
+  </header>
+
+  <!-- Main content section -->
+  <section class="main-content">
+    <div class="container main-content-container">
+      <!-- stepper panel -->
+      <div id="step-control" class="stepper-panel">
+        <div class="container stepper-container">
+          <div class="step active">
+            <div class="circle-container"></div>
+            <div class="label-container">基本資料</div>
+          </div>
+          <div class="step">
+            <div class="circle-container"></div>
+            <div class="label-container">狗狗預約</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- form panel -->
+      <div class="form-panel">
+        <div class="container form-container scrollbar">
+          <form id="form" class="form scrollbar" novalidate>
+            <!-- form-row -->
+            <div class="form-row a">
+              <label>姓名</label>
+              <input name="name" type="text" placeholder="請輸入你的全名 ..." required>
+              <div class="invalid-feedback">
+                This field is required!
+              </div>
+              <label>生日</label>
+              <input name="birthday" type="date" id="birthday" required>
+              <div class="invalid-feedback">
+                Requires at least 20 years old to adopt
+              </div>
+              <label>位置</label>
+              <select name="loction" id="loction" class="location">
+                <option value="" disabled selected>請選擇位置</option>
+                <option value="northern">北區</option>
+                <option value="middle">中區</option>
+                <option value="southern">南區</option>
+              </select>
+              <label>手機</label>
+              <input name="mobile" type="text" placeholder="請輸入你的手機號碼 ..." required>
+              <div class="invalid-feedback">
+                This field is required!
+              </div>
+            </div>
+            <!-- form-row -->
+            <div class="form-row b d-none">
+              <div class="sort-bar">
+                <select name="sex" id="sex" class="sex">
+                  <option value="">不限性別</option>
+                  <option value="公">公</option>
+                  <option value="母">母</option>
+                </select>
+                <select name="breed" id="breed" class="breed">
+                  <option value="">不限種類</option>
+                  <option value="柯基犬">柯基犬</option>
+                  <option value="牧羊犬">牧羊犬</option>
+                  <option value="黃金獵犬">黃金獵犬</option>
+                  <option value="法國鬥牛犬">法國鬥牛犬</option>
+                  <option value="吉娃娃">吉娃娃</option>
+                  <option value="松獅犬">松獅犬</option>
+                  <option value="貴賓犬">貴賓犬</option>
+                  <option value="臘腸犬">臘腸犬</option>
+                  <option value="中華田園犬">中華田園犬</option>
+                </select>
+                <action class="action view-all">顯示全部</action>
+              </div>
+              <div class="card-panel">
+                <!--  render cards -->
+              </div>
+            </div>
+            <div class="btn-control" id="btn-control">
+              <button class="action btn-outline" type="button">上一步</button>
+              <button class="action btn-primary" type="button">下一步</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- background white -->
+    <div class="background-white"></div>
+    </div>
+  </section>
+  <script src="index.js"></script>
+</body>
+
+</html>
